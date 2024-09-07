@@ -1,0 +1,43 @@
+.background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.key-container {
+  display: flex;
+  background-color: inherit;
+  height: 100px;
+  width: 60%;
+  position: relative;
+  top: 18rem;
+  left: 18rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.key {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 5rem;
+  width: 5rem;
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+  border: solid;
+  border-color: black;
+}
+
+p {
+  margin-top: 4px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-size: small;
+  color: yellow;
+}
+
+.key:hover {
+  background-color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

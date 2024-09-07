@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <img class="background" src="background.jpg">
+    <div class="key-container">
+        <button data-key="65" class="key A">A <p>Clap<p></button>
+        <button data-key="83" class="key S">S<p>Hithat<p></p></button>
+        <button data-key="68" class="key D">D<p>Click<p></p></button>
+        <button data-key="70" class="key F">F<p>Openhat<p></p></button>
+        <button data-key="71" class="key G">G<p>Boom<p></p></button>
+        <button data-key="72" class="key H">H<p>Ride<p></p></button>
+        <button data-key="74" class="key J">J<p>Snake<p></p></button>
+        <button data-key="75" class="key K">K<p>Tom<p></p></button>
+        <button data-key="76" class="key L">L<p>Tink<p></p></button>
+
+    </div>
+        <audio data-key="65" src="./sounds/boom.wav"></audio>
+        <audio data-key="83" src="./sounds/clap.wav"></audio>
+        <audio data-key="68" src="./sounds/hithat.wav"></audio>
+        <audio data-key="70" src="./sounds/kick.wav"></audio>
+        <audio data-key="71" src="./sounds/openhat.wav"></audio>
+        <audio data-key="72"src="./sounds/ride.wav"></audio>
+        <audio data-key="74" src="./sounds/snare.wav"></audio>
+        <audio data-key="75" src="./sounds/tink.wav"></audio>
+        <audio data-key="76" src="./sounds/tom.wav"></audio>
+</body>
+<script>
+    window.addEventListener('keydown',function(e){
+        console.log(e.keyCode);
+        const audio=document.querySelector(`audio[data-key="${e.keyCode}"]`)
+        console.log(audio);
+        audio.currentTime=0;
+        audio.play();
+    });
+</script>
+</html>
